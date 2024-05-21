@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HPP Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>HPP Calculator</h1>
+        <form id="hppForm">
+            <div class="form-group">
+                <label for="rawMaterialsCost">Total Bahan Baku (Rp):</label>
+                <input type="number" id="rawMaterialsCost" required>
+            </div>
+            <div class="form-group">
+                <label for="laborCost">Biaya Tenaga Kerja (Rp):</label>
+                <input type="number" id="laborCost" required>
+            </div>
+            <div class="form-group">
+                <label for="electricityUsage">Penggunaan Listrik per Bulan (kWh):</label>
+                <input type="number" id="electricityUsage" required>
+            </div>
+            <div class="form-group">
+                <label for="electricityRate">Tarif Listrik per kWh (Rp):</label>
+                <input type="number" id="electricityRate" required>
+            </div>
+            <div class="form-group">
+                <label for="gasUsage">Penggunaan Gas per Bulan (m³):</label>
+                <input type="number" id="gasUsage" required>
+            </div>
+            <div class="form-group">
+                <label for="gasRate">Tarif Gas per m³ (Rp):</label>
+                <input type="number" id="gasRate" required>
+            </div>
+            <button type="button" onclick="calculateHPP()">Hitung HPP</button>
+        </form>
+        <div id="result">
+            <h2>Hasil Perhitungan:</h2>
+            <p id="hppResult"></p>
+            <p id="totalCostResult"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
